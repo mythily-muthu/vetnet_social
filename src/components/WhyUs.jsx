@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { companyInfo } from "../utils";
-
+import TitleContainer from "./TitleContainer";
 const WhyUs = () => {
   const [info, setInfo] = useState(companyInfo);
 
@@ -8,9 +8,7 @@ const WhyUs = () => {
     <div className="flex flex-col w-full p-3">
       <div className="flex  my-10 w-full md:w-[90%] mx-auto bg-gray-50">
         <div className="flex p-3 md:p-12 flex-col gap-y-5">
-          <h1 className="flex justify-center font-semibold text-3xl tracking-wide">
-            Why Us?
-          </h1>
+          <TitleContainer text={"Why Us?"} />
           <p className="flex text-left md:text-start font-extralight text-xl leading-8">
             We're not just a service; we're a testament to resilience. We've
             walked in your shoes, faced the same challenges, and emerged

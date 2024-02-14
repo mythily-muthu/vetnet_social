@@ -3,7 +3,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Logo from "../assets/vetet_logo.png";
 import login from "../assets/login.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
@@ -16,22 +16,28 @@ const Login = () => {
   const handleLogin = (values) => {
     console.log("Form values:", values);
   };
+  let navigate = useNavigate();
 
-  const handleRegistration = (values) => {
-    console.log("Form values:", values);
+  const handleRegistration = () => {
+    navigate("/authentication/sign-up");
+  };
+
+  const handleClick = () => {
+    navigate("/");
   };
 
   return (
     <div className="flex flex-col w-full p-5 sm:p-14">
-      <div className="flex lg:ml-[25%] mt-10">
-        <Link to={"/"}>
-          <Button className="text-blue-500 border-btn-blue hover:text-white hover:bg-btn-blue flex gap-x-2 rounded-full items-center cursor-pointer">
-            <span>
-              <FaArrowLeftLong />
-            </span>
-            Back to Home
-          </Button>
-        </Link>
+      <div className="flex lg:ml-[25%] ">
+        <Button
+          onClick={handleClick}
+          className="text-blue-500 border-btn-blue hover:text-white hover:bg-btn-blue flex gap-x-2 rounded-full items-center cursor-pointer"
+        >
+          <span>
+            <FaArrowLeftLong />
+          </span>
+          Back to Home
+        </Button>
       </div>
 
       <div className="flex flex-col  w-full  lg:flex-row lg:w-[50%] my-5 border border-gray-300 rounded-2xl mx-auto p-3">
@@ -71,7 +77,9 @@ const Login = () => {
                     name="phone"
                     className="border p-2 rounded-md"
                   />
-                  <ErrorMessage name="phone" className="text-red-500" />
+                  <div className="text-red-500">
+                    <ErrorMessage name="phone" />
+                  </div>
                 </div>
 
                 <div className="mb-4 flex flex-col gap-y-2 ">
@@ -82,7 +90,9 @@ const Login = () => {
                     name="password"
                     className="border p-2"
                   />
-                  <ErrorMessage name="password" />
+                  <div className="text-red-500">
+                    <ErrorMessage name="password" />
+                  </div>
                 </div>
                 <div className="flex flex-col gap-y-5 ">
                   <Button
@@ -97,7 +107,7 @@ const Login = () => {
                     onClick={() => handleRegistration()}
                     className="bg-green-500 text-white p-2 rounded-md"
                   >
-                    <Link to={"/authentication/sign-up"}> Register</Link>
+                    Register
                   </Button>
                   <span>
                     Don't remember the password?
