@@ -7,7 +7,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 
 function App() {
   return (
-    <div className="flex flex-col w-full ">
+    <div className="flex flex-col w-full min-h-screen ">
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
