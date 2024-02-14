@@ -12,7 +12,7 @@ const Founder = () => {
             <img
               src={pradeep}
               alt="image"
-              className="w-[300px] h-[300px] object-fill"
+              className="w-[300px] h-[250px] object-contain"
             />
           </div>
           <h1 className="flex justify-center font-semibold text-3xl tracking-wide">

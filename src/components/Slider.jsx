@@ -24,7 +24,7 @@ const Slider = () => {
     <div className="relative">
       <FaChevronLeft
         onClick={handlePrev}
-        className="absolute left-60 top-[50%] text-white text-3xl transform -translate-y-1/2  "
+        className="absolute left-60 top-[50%] text-white text-3xl transform -translate-y-1/2 "
       />
       <FaChevronRight
         onClick={handleNext}
@@ -34,7 +34,7 @@ const Slider = () => {
         <img
           src={images[currentIndex]}
           alt={`Image ${currentIndex + 1}`}
-          className="h-[400px] w-full object-cover "
+          className="h-[400px] w-full object-cover"
         />
       </div>
     </div>

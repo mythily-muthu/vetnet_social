@@ -7,14 +7,14 @@ const OurServices = () => {
     <div className="flex flex-col w-full p-3">
       <div className="flex flex-col md:flex-row my-10 w-full h-full sm:px-10 md:w-[90%] mx-auto bg-gray-50">
         <div className="flex p-3 md:p-12 flex-col gap-y-5">
-          <h1 className="flex justify-center font-semibold text-3xl tracking-wide">
+          <h1 className="flex justify-center font-semibold text-3xl tracking-wide ">
             Our Services
           </h1>
           <h1 className="font-bold text-2xl lg:text-3xl">
             <span className="">Empowering</span> Veterans -{" "}
             <span className="text-gray-600">One-Stop Solution.</span>
           </h1>
-          <p className="flex md:text-start font-light text-justify ">
+          <p className="flex md:text-start font-light text-lg tracking-wider text-justify ">
             At VetNet.Social, we simplify your transition from military to
             civilian life with targeted services. From crafting standout resumes
             to optimizing your LinkedIn profile, we help you shine in the job

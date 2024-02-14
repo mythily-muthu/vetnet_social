@@ -8,14 +8,14 @@ const Header = () => {
   const isLargeScreen = useMediaQuery("(min-width: 996px)");
 
   return (
-    <div className="flex p-3 justify-between w-full md:w-[90%]  mx-auto  ">
+    <div className="flex p-3 justify-between w-full md:w-[90%] mx-auto  ">
       <div className="h-12">
         <img src={Logo} alt="logo" className="w-full h-full" />
       </div>
       <div className="flex items-center ">
         {isLargeScreen ? (
           <Link to={"/authentication"}>
-            <button className="text-base text-btn-blue border border-btn-blue rounded-md px-3 py-[6px]">
+            <button className="text-base text-btn-blue border border-btn-blue hover:bg-btn-blue hover:text-white rounded-md px-3 py-[6px]">
               Login
             </button>
           </Link>
