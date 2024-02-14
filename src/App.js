@@ -1,20 +1,22 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Header from "./components/Header";
+
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Register from "./pages/";
-
+import Register from "./pages/Register";
+import ForgotPassword from "./pages/ForgotPassword";
 
 function App() {
   return (
-    <div className="App">
+    <div className="flex flex-col w-full ">
       <Router>
-        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/authentication" element={<Login />} />
-          <Route path="/authentication/sign-up" element={<Register/>} />
-          <Route path="/authentication/forgot-password" element={<ForgotPassword/>} />
+          <Route path="/authentication/sign-up" element={<Register />} />
+          <Route
+            path="/authentication/forgot-password"
+            element={<ForgotPassword />}
+          />
         </Routes>
       </Router>
     </div>
