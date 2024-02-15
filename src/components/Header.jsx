@@ -13,7 +13,7 @@ const Header = () => {
   };
   return (
     <div className="flex p-3 justify-between w-full md:w-[90%] mx-auto  ">
-      <div className="h-12">
+      <div className="h-12 w-[150px]">
         <img src={Logo} alt="logo" className="w-full h-full" />
       </div>
       <div className="flex items-center ">
@@ -25,7 +25,10 @@ const Header = () => {
             Login
           </Button>
         ) : (
-          <AiOutlineMenu className="p-2 border border-gray-400 rounded-md w-full h-10 cursor-pointer" />
+          <AiOutlineMenu
+            onClick={handleClick}
+            className="p-2 border border-gray-400 rounded-md w-full h-10 cursor-pointer"
+          />
         )}
       </div>
     </div>

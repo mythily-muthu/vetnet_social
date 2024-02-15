@@ -24,11 +24,11 @@ const Slider = () => {
     <div className="relative">
       <FaChevronLeft
         onClick={handlePrev}
-        className="absolute z-10 left-60 top-[50%] text-white text-3xl "
+        className="absolute z-10 left-5 md:left-60 top-[50%] text-white text-3xl "
       />
       <FaChevronRight
         onClick={handleNext}
-        className="absolute right-60 z-10 top-[50%] text-white text-3xl "
+        className="absolute right-5 md:right-60 z-10 top-[50%] text-white text-3xl "
       />
       <div className="w-full relative">
         <img
