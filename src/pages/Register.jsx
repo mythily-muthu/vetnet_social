@@ -98,11 +98,9 @@ const Register = () => {
     phone: Yup.string().required("Phone is required"),
     email: Yup.string().required("Email is required"),
     password: Yup.string().required("Password is required"),
-    phone: Yup.string().required("Phone is required"),
     gender: Yup.string().required("Gender is required"),
     rank: Yup.string().required("Rank is required"),
     service: Yup.string().required("Service is required"),
-    password: Yup.string().required("Password is required"),
   });
 
   let formik = useFormik({
@@ -151,7 +149,7 @@ const Register = () => {
               />
             </div>
             <div className="flex w-[250px] h-[250px]">
-              <img src={sign_up} alt="image" className="w-full h-full" />
+              <img src={sign_up} alt="sign_up_img" className="w-full h-full" />
             </div>
           </div>
           {/* right */}
