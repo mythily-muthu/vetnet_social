@@ -1,12 +1,12 @@
 import React from "react";
 import Logo from "../assets/vetet_logo.png";
 import { AiOutlineMenu } from "react-icons/ai";
-import { useMediaQuery } from "@react-hook/media-query";
+// import { useMediaQuery } from "@react-hook/media-query";
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 
 const Header = () => {
-  const isLargeScreen = useMediaQuery("(min-width: 996px)");
+  // const isLargeScreen = useMediaQuery("(min-width: 996px)");
   let navigate = useNavigate();
   const handleClick = () => {
     navigate("/authentication");
@@ -17,7 +17,7 @@ const Header = () => {
         <img src={Logo} alt="logo" className="w-full h-full" />
       </div>
       <div className="flex items-center ">
-        {isLargeScreen ? (
+        {true ? (
           <Button
             onClick={handleClick}
             className="text-base text-btn-blue border border-btn-blue hover:bg-btn-blue hover:text-white rounded-md px-3 py-[6px]"
