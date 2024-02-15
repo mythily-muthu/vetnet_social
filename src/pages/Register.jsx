@@ -140,7 +140,7 @@ const Register = () => {
         </div>
         <div className="w-full  border flex justify-center  my-5 flex-col md:flex-row p-7 gap-y-5 rounded-md bg-white">
           {/* left */}
-          <div className="flex w-[50%] flex-col gap-y-5 items-center justify-center">
+          <div className="flex w-full lg:w-[50%] flex-col gap-y-5 items-center justify-center">
             <div className="flex w-[120px] md:w-[150px] h-14">
               <img
                 src={logo}
