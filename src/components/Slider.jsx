@@ -33,7 +33,7 @@ const Slider = () => {
       <div className="w-full relative">
         <img
           src={images[currentIndex]}
-          alt={`Image ${currentIndex + 1}`}
+          alt={`image_${currentIndex + 1}`}
           className="h-[400px] w-full object-cover transition-transform duration-300 "
         />
         <div className="absolute inset-0 bg-black opacity-60"></div>

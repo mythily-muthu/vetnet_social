@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { scrollImages } from "../utils";
 import TitleContainer from "./TitleContainer";
 const ValuedPartners = () => {
-  const [partners, setPartners] = useState(scrollImages);
-
   return (
     <div className="flex flex-col w-full p-3 overflow-x-hidden">
       <TitleContainer text={"Valued Partners"} />
@@ -24,6 +22,7 @@ const ValuedPartners = () => {
                   <div className="flex w-[200px]  h-[60px]">
                     <img
                       className="w-full h-full object-contain"
+                      alt="partners"
                       src={image.image}
                     />
                   </div>

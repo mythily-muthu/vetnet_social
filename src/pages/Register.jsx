@@ -149,7 +149,7 @@ const Register = () => {
               />
             </div>
             <div className="flex w-[250px] h-[250px]">
-              <img src={sign_up} alt="sign_up_img" className="w-full h-full" />
+              <img src={sign_up} alt="sign_up_" className="w-full h-full" />
             </div>
           </div>
           {/* right */}

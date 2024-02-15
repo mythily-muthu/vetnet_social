@@ -41,7 +41,7 @@ const OurServices = () => {
           <div className="flex w-full justify-center items-center">
             <img
               src={services}
-              alt="image"
+              alt="services"
               className="w-full h-[200px] sm:h-[250px] lg:h-[300px] object-cover"
             />
           </div>

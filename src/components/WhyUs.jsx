@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { companyInfo } from "../utils";
 import TitleContainer from "./TitleContainer";
 const WhyUs = () => {
-  const [info, setInfo] = useState(companyInfo);
-
   return (
     <div className="flex flex-col w-full p-3">
       <div className="flex  my-10 w-full md:w-[90%] mx-auto bg-gray-50">
@@ -23,7 +21,7 @@ const WhyUs = () => {
       {/* vision misson */}
       <div className="flex flex-col w-full sm:px-10 md:w-[90%] mx-auto  ">
         <div className="flex flex-col md:flex-row md:gap-x-5 gap-y-4">
-          {info.map((data) => {
+          {companyInfo.map((data) => {
             return (
               <div
                 key={data.id}
@@ -35,7 +33,11 @@ const WhyUs = () => {
                   <p className="text-justify">{data.text}</p>
                 </div>
                 <div className="hidden md:flex lg:w-[50%]">
-                  <img src={data.image} className="w-[300px] h-[200px] " />
+                  <img
+                    src={data.image}
+                    alt="datas"
+                    className="w-[300px] h-[200px] "
+                  />
                 </div>
               </div>
             );

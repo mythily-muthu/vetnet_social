@@ -10,7 +10,7 @@ const Founder = () => {
           <div className="flex w-full justify-center items-center">
             <img
               src={pradeep}
-              alt="image"
+              alt="founder"
               className="w-[300px] h-[250px] object-contain"
             />
           </div>

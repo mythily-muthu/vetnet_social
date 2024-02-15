@@ -24,7 +24,7 @@ const ForgotPassword = () => {
             <div className="flex items-center justify-center">
               <img
                 src={authentication}
-                alt="image"
+                alt="authentication"
                 className="w-[200px] h-full"
               />
             </div>
