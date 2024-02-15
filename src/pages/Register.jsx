@@ -98,6 +98,11 @@ const Register = () => {
     phone: Yup.string().required("Phone is required"),
     email: Yup.string().required("Email is required"),
     password: Yup.string().required("Password is required"),
+    phone: Yup.string().required("Phone is required"),
+    gender: Yup.string().required("Gender is required"),
+    rank: Yup.string().required("Rank is required"),
+    service: Yup.string().required("Service is required"),
+    password: Yup.string().required("Password is required"),
   });
 
   let formik = useFormik({
@@ -122,7 +127,7 @@ const Register = () => {
     navigate("/authentication");
   };
   return (
-    <div className="w-full h-screen flex flex-col  items-center">
+    <div className="w-full min-h-screen flex flex-col  items-center">
       <div className="w-full p-5 md:w-[60%] flex flex-col justify-center items-center  h-full ">
         <div>
           <Button
@@ -137,7 +142,7 @@ const Register = () => {
         </div>
         <div className="w-full  border flex justify-center  my-5 flex-col md:flex-row p-7 gap-y-5 rounded-md bg-white">
           {/* left */}
-          <div className="flex w-[50%] flex-col gap-y-5 items-center">
+          <div className="flex w-[50%] flex-col gap-y-5 items-center justify-center">
             <div className="flex w-[120px] md:w-[150px] h-14">
               <img
                 src={logo}
