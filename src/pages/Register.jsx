@@ -24,6 +24,21 @@ const Register = () => {
       label: "Last Name",
     },
     {
+      name: "category",
+      type: "radio",
+      label: "Category",
+      options: [
+        { label: "Veteran", value: "veteran" },
+        { label: "Retiring Soon", value: "retiring_soon" },
+        { label: "Legacy Bearer (Spouse)", value: "legacy_bearer_spouse" },
+        {
+          label: "Heritage Carriers (Children)",
+          value: "heritage_carriers_children",
+        },
+      ],
+      width: "w-[90%]",
+    },
+    {
       name: "dateOfBirth",
       type: "date",
       label: "Date of Birth",
@@ -32,6 +47,27 @@ const Register = () => {
       name: "dateOfCommission",
       type: "date",
       label: "Date of Commission",
+    },
+    {
+      name: "gender",
+      type: "select",
+      label: "Gender",
+      options: ["Male", "Female", "Others"],
+      width: "w-[90%]",
+    },
+    {
+      name: "service",
+      type: "select",
+      label: "Service",
+      options: ["Army", "Navy", "Air Force"],
+      width: "w-[45%]",
+    },
+    {
+      name: "rank",
+      type: "select",
+      label: "Rank",
+      options: ["Officer", "JCO", "OR"],
+      width: "w-[45%]",
     },
 
     {
@@ -73,6 +109,9 @@ const Register = () => {
       phone: "",
       email: "",
       password: "",
+      category: "veteran",
+      service: "",
+      rank: "",
     },
     validationSchema: registerSchema,
     onSubmit: handleSubmit,
@@ -115,17 +154,54 @@ const Register = () => {
           <div className="flex w-full  md:w-[50%] flex-col gap-2 ">
             <div className="flex gap-2 flex-wrap">
               {registerFields.map(
-                ({ name, type, label, width = " w-full md:w-[45%]" }) => {
+                ({
+                  name,
+                  type,
+                  label,
+                  width = " w-full md:w-[45%]",
+                  options,
+                }) => {
                   return (
                     <div className={`flex flex-col gap-2 ${width}`}>
                       <p>{label}</p>
-                      <input
-                        value={formik.values[name]}
-                        name={name}
-                        type={type}
-                        className="border p-2"
-                        onChange={formik.handleChange}
-                      />
+
+                      {type === "select" ? (
+                        <select
+                          value={formik.values[name]}
+                          name={name}
+                          onChange={formik.handleChange}
+                          className="border p-2"
+                        >
+                          <option value="">Select {label}</option>
+                          {options.map((option) => (
+                            <option value={option}>{option}</option>
+                          ))}
+                        </select>
+                      ) : type === "radio" ? (
+                        <div className="flex flex-col gap-1">
+                          {options.map(({ label, value }) => {
+                            return (
+                              <div className="flex gap-1 items-center">
+                                <input
+                                  value={formik.values[name]}
+                                  checked={formik.values[name] === value}
+                                  type={type}
+                                  name={name}
+                                />
+                                <span>{label}</span>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      ) : (
+                        <input
+                          value={formik.values[name]}
+                          name={name}
+                          type={type}
+                          className="border p-2"
+                          onChange={formik.handleChange}
+                        />
+                      )}
                       {formik.errors[name] && (
                         <p className="text-red-500 ">{formik.errors[name]}</p>
                       )}
