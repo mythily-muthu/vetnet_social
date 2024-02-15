@@ -127,7 +127,7 @@ const Register = () => {
   return (
     <div className="w-full min-h-screen flex flex-col  items-center">
       <div className="w-full p-5 md:w-[60%] flex flex-col justify-center items-center  h-full ">
-        <div>
+        <div className="flex items-center w-full">
           <Button
             onClick={handleLogin}
             className="text-blue-500 border-btn-blue hover:text-white hover:bg-btn-blue flex gap-x-2 rounded-full items-center cursor-pointer"
