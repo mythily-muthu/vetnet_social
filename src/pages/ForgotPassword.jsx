@@ -8,7 +8,7 @@ const ForgotPassword = () => {
   return (
     <div className="w-full h-screen flex flex-col bg-blue-100 items-center">
       <div className="w-[60%] flex flex-col justify-center items-center  h-full ">
-        <Link to={"/authentication"}>
+        <Link className="w-full" to={"/authentication"}>
           <Button className="text-blue-500 border-btn-blue hover:text-white hover:bg-btn-blue flex gap-x-2 rounded-full items-center cursor-pointer">
             <span>
               <FaArrowLeftLong />
